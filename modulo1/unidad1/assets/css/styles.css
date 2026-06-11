@@ -4,14 +4,16 @@
 }
 
 body {
-    background-color: red;
+    background-color: beige;
     text-align: center;
 }
 
-h1 {
+/* #principalTitle {
     font-size: 100px;
-}
+} */
 
 .title {
-    color: cornflowerblue;
+    font-size: 20px;
+    color: beige;
+    font-family: Arial, Helvetica, sans-serif;
 }
