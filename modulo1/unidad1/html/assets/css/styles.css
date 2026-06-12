@@ -5,12 +5,18 @@
 
 body {
     background-color: beige;
-    text-align: center;
+    overflow-x: hidden;
 }
 
 /* #principalTitle {
     font-size: 100px;
 } */
+
+section {
+    width: 100vw;
+    height: 100vh;
+    background-color: burlywood;
+}
 
 .title {
     font-size: 20px;
