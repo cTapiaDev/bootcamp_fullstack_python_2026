@@ -37,7 +37,7 @@
         </style>
     </head>
     <body>
-        <main class="container py-5">
+        <main class="container py-5 mb-5">
             <section>
                 <h2 class="h3 fw-bold border-bottom pb-2 mb-4">1. Arquitectura de Grillas</h2>
                 <h5 class="text-secondary mb-3">A. La cuadrícula base de 12 (100% del ancho)</h5>
@@ -251,10 +251,201 @@
                             </button>
                         </div>
                     </div>
+
+                    <div class="col-12 col-lg-5 d-flex flex-column gap-4">
+                        <div class="accordion shadow-sm" id="acordeonTemas">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#colapsoUno"
+                                    >
+                                        Filosofía Mobile First
+                                    </button>
+                                </div>
+                                <div
+                                    id="colapsoUno"
+                                    class="accordion-collapse collapse show"
+                                    data-bs-parent="acordeonTemas"
+                                >
+                                    <div class="accordion-body text-muted small">
+                                        Diseñar prioritariamente la visualización y estructura del
+                                        sitio en dispositivos móviles, escalando hacia pantallas de
+                                        mayor tamaño.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button
+                                        class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#colapsoDos"
+                                    >
+                                        Uso de CDN vs Local
+                                    </button>
+                                </div>
+                                <div
+                                    id="colapsoDos"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="acordeonTemas"
+                                >
+                                    <div class="accordion-body text-muted small">
+                                        Integrar mediante CDN mejora los tiempos de carga por caché,
+                                        mientras que los archivos locales permiten trabajar offline.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="card border-0 shadow-sm text-center flex-grow-1">
+                            <div class="card-body">
+                                <img
+                                    src="https://placehold.co/100x100/3b82f6/white?text=Admin"
+                                    class="rounded-circle mb-3 shadow"
+                                    alt="Perfil"
+                                />
+                                <h5 class="card-title fw-bold text-dark">Programador</h5>
+                                <h6 class="card-subtitle mb-5 text-primary">FullStack Python</h6>
+
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">
+                                        Ver Repositorio
+                                    </button>
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        Contactar
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <section class="bg-white p-4 rounded shadow border border-light">
+                <h2 class="h3 fw-bold border-bottom pb-2 mb-4">
+                    4. Procesamiento de Datos y Formularios
+                </h2>
+
+                <div class="row">
+                    <form id="formularioAvanzado" class="bg-light p-4 rounded border mb-4">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioNombre" class="form-label fw-bold"
+                                    >Nombre de Usuario</label
+                                >
+                                <input
+                                    id="usuarioNombre"
+                                    type="text"
+                                    class="form-control form-control-lg"
+                                    placeholder="Juanito Perez"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioClave" class="form-label fw-bold"
+                                    >Contraseña</label
+                                >
+                                <input
+                                    id="usuarioClave"
+                                    type="password"
+                                    class="form-control form-control-lg"
+                                    placeholder="***********"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioEmail" class="form-label fw-bold"
+                                    >Correo Electrónico</label
+                                >
+                                <input
+                                    id="usuarioEmail"
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="correo@gmail.com"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="usuarioFecha" class="form-label fw-bold"
+                                    >Fecha de Nacimiento</label
+                                >
+                                <input
+                                    id="usuarioFecha"
+                                    type="date"
+                                    class="form-control"
+                                    required
+                                />
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check form-switch">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        role="switch"
+                                        id="switchSuscripcion"
+                                    />
+                                    <label class="form-check-label" for="switchSuscripcion"
+                                        >Suscruburse al Newsletter</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" />
+
+                        <div class="d-flex justify-content-between">
+                            <button type="reset" class="btn btn-outline-danger px-4">
+                                Borrar Datos
+                            </button>
+                            <button
+                                type="submit"
+                                id="btnProcesar"
+                                class="btn btn-success px-5 fw-bold"
+                            >
+                                Procesar Registro
+                            </button>
+                        </div>
+                    </form>
+
+                    <div
+                        id="alertaSistema"
+                        class="alert alert-success alert-dismissible fade d-none"
+                        role="alert"
+                    >
+                        <h4 class="alert-heading">¡Registro Completado!</h4>
+                        <p>
+                            Los datos han sido validados e ingresados correctamente a nuestra base
+                            de datos.
+                        </p>
+                        <hr />
+                        <p class="mb-0 small">Esta es una alerta que utiliza clases de utilidad</p>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Close"
+                        ></button>
+                    </div>
                 </div>
             </section>
         </main>
 
+        <footer class="bg-dark text-white text-center py-4">
+            <p class="mb-0">&copy; 2026 Dev Bootcamp - Componentes y Grillas Bootstrap v5</p>
+        </footer>
+
+        <script src="./js/app.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
