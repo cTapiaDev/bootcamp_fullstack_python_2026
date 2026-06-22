@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laboratorio Práctico - jQuery Avanzado</title>
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+    <body>
+        <main class="contenedor">
+            <header class="cabecera">
+                <h1>Masterclass de jQuery</h1>
+                <p>Laboratorio interactivo para DOM, Eventos, Efectos y Formularios.</p>
+            </header>
+
+            <section class="panel">
+                <h2>1. Selectores por Atributo y Modificación CSS</h2>
+                <ul class="lista-destinos">
+                    <li class="vacaciones">
+                        <h3>La Serena, Chile</h3>
+                        <span class="valor">$120.000</span>
+                    </li>
+                    <li class="vacaciones">
+                        <h3>Valdivia, Chile</h3>
+                        <span class="valor">$150.000</span>
+                    </li>
+                </ul>
+                <a href="https://jquery.com" target="_blank" class="link-externo"
+                    >Sitio oficial de jQuery</a
+                >
+                <div class="controles">
+                    <button id="btnModificarPrecios">Aplicar Descuento y Destacar</button>
+                    <button id="btnMarcarLinks">Resaltar enlaces (href)</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>2. Efectos Nativos (Show, Hide, Fade, Slide)</h2>
+                <div id="cajaAnimada" class="caja-efectos">
+                    Contenedor con animaciones encadenadas
+                </div>
+                <div class="controles">
+                    <button id="btnFade">Fade In / Fade Out</button>
+                    <button id="btnSlide">Slide Toggle</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>3. Traversal y Delegación de Eventos</h2>
+                <p>
+                    Al agregar elementos dinámicamente, los eventos tradicionales no funcionan.
+                    Usamos delegación.
+                </p>
+
+                <div id="contenedorTareas" class="tareas-container">
+                    <div class="tarea">
+                        <span>Configurar entorno</span>
+                        <button class="btn-eliminar">X</button>
+                    </div>
+                </div>
+
+                <div class="controles">
+                    <button id="btnAgregarTarea">Añadir Nueva Tarea</button>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>4. Formularios (.val y submit)</h2>
+                <form id="formularioRegistro">
+                    <div class="grupo-form">
+                        <label for="inputNombre">Nombre de Usuario:</label>
+                        <input
+                            type="text"
+                            id="inputNombre"
+                            class="input-text"
+                            placeholder="Ej. DevMaster"
+                            required
+                        />
+                    </div>
+                    <div class="grupo-form">
+                        <label for="inputRol">Rol principal:</label>
+                        <select id="inputRol" class="input-select">
+                            <option value="frontend">Frontend</option>
+                            <option value="backend">Backend</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="btnProcesarForm">Procesar Datos</button>
+                </form>
+                <div id="resultadoFormulario" class="resultado-oculto"></div>
+            </section>
+        </main>
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>
