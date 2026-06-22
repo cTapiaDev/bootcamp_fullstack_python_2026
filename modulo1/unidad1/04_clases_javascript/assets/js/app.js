@@ -65,10 +65,11 @@ const ejecutarComparacion = () => {
     // === -> comparación estricta, si toma en cuenta el tipo de dato
 
     console.log('--- Evaluaciones Lógicas ---');
-    console.log(`¿10 == '10'?: ${valorA == valorB}`);
-    console.log(`¿10 === '10'?: ${valorA === valorB}`);
+    console.log(`¿10 == '10'?: ${valorA == valorB}`); // true
+    console.log(`¿10 === '10'?: ${valorA === valorB}`); // false
     console.log(`¿10 > 5?: ${valorA > 5}`);
     console.log(`¿10 >= 10?: ${valorA >= 10}`);
+    console.log(`¿10 != 15?: ${valorA != 15}`); // true
 };
 
 // 5. Entrada de Datos e Interacción con el DOM
