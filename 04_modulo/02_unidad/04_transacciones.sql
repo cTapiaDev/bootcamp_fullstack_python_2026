@@ -59,3 +59,48 @@ FROM cuentas;
 UPDATE cuentas SET balance = balance + 100 WHERE numero_cuenta = 1;
 
 COMMIT;
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM cuentas ORDER BY numero_cuenta;
+
+BEGIN;
+UPDATE cuentas SET balance = balance + 1000 WHERE numero_cuenta = 2;
+UPDATE cuentas SET balance = balance - 3000 WHERE numero_cuenta = 2;
+ROLLBACK;
+
+
+INSERT INTO cuentas(numero_cuenta, balance) VALUES
+(4, 7000),
+(5, 500),
+(6, 12000),
+(7, 900),
+(8, 100),
+(9, 20000),
+(10, 50),
+(11, 25000),
+(12, 1500),
+(13, 0);
+
+SELECT *
+FROM cuentas
+WHERE balance > 2000;
+
+SELECT *
+FROM cuentas
+WHERE balance < 1000;
+
+SELECT AVG(balance) AS "Promedio"
+FROM cuentas;
+
+SELECT AVG(balance) AS "Promedio"
+FROM cuentas
+WHERE balance >= 10000;
